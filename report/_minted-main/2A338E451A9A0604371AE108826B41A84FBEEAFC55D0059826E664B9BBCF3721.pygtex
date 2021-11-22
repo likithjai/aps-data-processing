@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{sample}\PYG{o}{=}\PYG{n}{row}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}SampleName\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{()}
+  \PYG{n}{fname}\PYG{o}{=}\PYG{n}{sample}\PYG{o}{.}\PYG{n}{replace}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

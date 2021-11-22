@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{pathlib} \PYG{k+kn}{import} \PYG{n}{Path}
+\PYG{n}{p}\PYG{o}{=}\PYG{n}{Path}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}./sections\PYGZus{}dir\PYGZus{}final\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{p}\PYG{o}{.}\PYG{n}{mkdir}\PYG{p}{(}\PYG{n}{parents}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{exist\PYGZus{}ok}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+\PYG{k}{def} \PYG{n+nf}{file\PYGZus{}ops}\PYG{p}{(}\PYG{n}{sample\PYGZus{}name}\PYG{p}{,}\PYG{n}{dest\PYGZus{}dir}\PYG{o}{=}\PYG{n}{p}\PYG{p}{)}
+    \PYG{n}{target}\PYG{o}{=}\PYG{n}{dest\PYGZus{}dir}\PYG{o}{/}\PYG{n}{sample\PYGZus{}name}
+    \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{target}\PYG{o}{.}\PYG{n}{exists}\PYG{p}{():}
+        \PYG{n}{target}\PYG{o}{.}\PYG{n}{mkdir}\PYG{p}{(}\PYG{n}{parents}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,}\PYG{n}{exist\PYGZus{}ok}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}the following lines are contained within the for loop, and hence, indented}
+  \PYG{n}{file\PYGZus{}ops}\PYG{p}{(}\PYG{n}{fname}\PYG{p}{)}
+  \PYG{n}{curr\PYGZus{}meta}\PYG{o}{.}\PYG{n}{to\PYGZus{}csv}\PYG{p}{(}\PYG{n}{p}\PYG{o}{/}\PYG{n}{fname}\PYG{o}{/}\PYG{p}{(}\PYG{n}{fname}\PYG{o}{+}\PYG{l+s+s1}{\PYGZsq{}\PYGZus{}metadata.csv\PYGZsq{}}\PYG{p}{),}\PYG{n}{sep}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{},\PYGZsq{}}\PYG{p}{,} \PYG{n}{index}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{)}
+\end{Verbatim}

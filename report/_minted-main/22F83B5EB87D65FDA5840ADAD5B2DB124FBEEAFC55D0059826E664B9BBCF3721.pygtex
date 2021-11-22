@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{wax\PYGZus{}fnum}\PYG{p}{(}\PYG{n}{row}\PYG{p}{):}
+    \PYG{k}{return} \PYG{n+nb}{round}\PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{row}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}saxs fnum\PYGZsq{}}\PYG{p}{])}\PYG{o}{/}\PYG{l+m+mi}{10}\PYG{p}{)}
+
+\PYG{n}{meta\PYGZus{}df}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}wax fnum\PYGZsq{}}\PYG{p}{]}\PYG{o}{=}\PYG{n}{meta\PYGZus{}df}\PYG{o}{.}\PYG{n}{apply}\PYG{p}{(}\PYG{n}{wax\PYGZus{}fnum}\PYG{p}{,}\PYG{n}{axis}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+\end{Verbatim}

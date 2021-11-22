@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{buffer\PYGZus{}frames}\PYG{o}{=}\PYG{l+m+mi}{100} \PYG{c+c1}{\PYGZsh{}this line needs to be placed before the for loop starts}
+  \PYG{n}{fnum\PYGZus{}lims}\PYG{o}{=}\PYG{p}{[}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{i}\PYG{p}{)} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{p}{[}\PYG{n}{row}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}SAXS Frame Start\PYGZsq{}}\PYG{p}{],}\PYG{n}{row}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}SAXS Frame End\PYGZsq{}}\PYG{p}{]]]}
+  \PYG{n}{fnum\PYGZus{}lims}\PYG{o}{=}\PYG{p}{[}\PYG{n}{el}\PYG{o}{+}\PYG{p}{((}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{o}{**}\PYG{p}{(}\PYG{n}{idex}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{o}{*}\PYG{n}{buffer\PYGZus{}frames}\PYG{p}{)} \PYG{k}{for} \PYG{n}{idex}\PYG{p}{,}\PYG{n}{el} \PYG{o+ow}{in} \PYG{n+nb}{enumerate}\PYG{p}{(}\PYG{n}{fnum\PYGZus{}lims}\PYG{p}{)]}
+\end{Verbatim}

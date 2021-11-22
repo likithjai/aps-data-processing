@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{readme\PYGZus{}str}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}buffer\PYGZus{}frames=100 \PYGZsh{}number of frames added to the beginning and end of each section to act as a buffer for context i.e., each section, instead of consisting of SAXS Frame Start to SAXS Frame End, will consist of (SAXS Frame Start \PYGZhy{} buffer) to (SAXS Frame End + buffer)\PYGZsq{}} \PYG{c+c1}{\PYGZsh{}defined before the loop}
+
+\PYG{c+c1}{\PYGZsh{}within the loop}
+  \PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{n}{p}\PYG{o}{/}\PYG{n}{fname}\PYG{o}{/}\PYG{l+s+s1}{\PYGZsq{}readme.txt\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}w\PYGZsq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{f}\PYG{p}{:}
+      \PYG{n}{f}\PYG{o}{.}\PYG{n}{writelines}\PYG{p}{(}\PYG{n}{readme\PYGZus{}str}\PYG{p}{)}
+\end{Verbatim}

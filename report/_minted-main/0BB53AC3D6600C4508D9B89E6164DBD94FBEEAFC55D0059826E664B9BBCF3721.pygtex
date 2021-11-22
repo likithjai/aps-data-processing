@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{datetime} \PYG{k+kn}{import} \PYG{n}{datetime} \PYG{k}{as} \PYG{n}{dt}
+
+\PYG{k}{def} \PYG{n+nf}{dt\PYGZus{}formatter}\PYG{p}{(}\PYG{n}{dt\PYGZus{}str}\PYG{p}{):}
+    \PYG{k}{return} \PYG{n}{dt}\PYG{o}{.}\PYG{n}{strptime}\PYG{p}{(}\PYG{n}{dt\PYGZus{}str}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}a}\PYG{l+s+s1}{ \PYGZpc{}b }\PYG{l+s+si}{\PYGZpc{}d}\PYG{l+s+s1}{ \PYGZpc{}H:\PYGZpc{}M:\PYGZpc{}S \PYGZpc{}Y)}
+
+\PYG{k}{def} \PYG{n+nf}{clean\PYGZus{}df}\PYG{p}{(}\PYG{n}{in\PYGZus{}df}\PYG{p}{):}
+    \PYG{n}{in\PYGZus{}df}\PYG{o}{.}\PYG{n}{columns}\PYG{o}{=}\PYG{n}{in\PYGZus{}df}\PYG{o}{.}\PYG{n}{columns}\PYG{o}{.}\PYG{n}{str}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{()}
+    \PYG{k}{for} \PYG{n}{c} \PYG{o+ow}{in} \PYG{n}{in\PYGZus{}df}\PYG{o}{.}\PYG{n}{columns}\PYG{p}{:}
+        \PYG{k}{if} \PYG{n}{in\PYGZus{}df}\PYG{p}{[}\PYG{n}{c}\PYG{p}{]}\PYG{o}{.}\PYG{n}{isnull}\PYG{p}{()}\PYG{o}{.}\PYG{n}{all}\PYG{p}{():}
+            \PYG{k}{del} \PYG{n}{in\PYGZus{}df}\PYG{p}{[}\PYG{n}{c}\PYG{p}{]}
+    \PYG{n}{in\PYGZus{}df}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Date\PYGZsq{}}\PYG{p}{]}\PYG{o}{=}\PYG{n}{in\PYGZus{}df}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Date\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{apply}\PYG{p}{(}\PYG{n}{dt\PYGZus{}formatter}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{in\PYGZus{}df}
+
+\PYG{n}{meta\PYGZus{}df}\PYG{o}{=}\PYG{n}{clean\PYGZus{}df}\PYG{p}{(}\PYG{n}{meta\PYGZus{}df}\PYG{p}{)}
+\end{Verbatim}

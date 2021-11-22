@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}
+\PYG{n}{legend\PYGZus{}df}\PYG{o}{=}\PYG{n}{pd}\PYG{o}{.}\PYG{n}{read\PYGZus{}excel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}SAXSframevstest\PYGZus{}final.xlsx\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{meta\PYGZus{}df}\PYG{o}{=}\PYG{n}{pd}\PYG{o}{.}\PYG{n}{read\PYGZus{}csv}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}aclarke\PYGZus{}jul21\PYGZus{}exp\PYGZus{}tracking.csv\PYGZsq{}}\PYG{p}{,}\PYG{n}{low\PYGZus{}memory}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{)}
+\end{Verbatim}
